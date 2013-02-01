@@ -7,6 +7,9 @@ Vagrant::Config.run do |config|
   # via the IP.
   config.vm.network :hostonly, "10.0.0.34"
 
+  # Configure DNS according with the new version of vagrant
+  config.vm.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
   config.vm.forward_port 80, 8034
