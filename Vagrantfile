@@ -5,7 +5,7 @@ Vagrant::Config.run do |config|
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
-  config.vm.network :hostonly, "10.0.0.34"
+  config.vm.network :hostonly, "10.0.10.34"
 
   # Configure DNS according with the new version of vagrant
   config.vm.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
