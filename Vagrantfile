@@ -1,7 +1,7 @@
 Vagrant::Config.run do |config|
 
   config.vm.box = "statsbox"
-  config.vm.box_url = "http://dl.dropbox.com/u/7490647/talifun-ubuntu-11.04-server-amd64.box"
+  config.vm.box_url = "https://github.com/downloads/divio/vagrant-boxes/vagrant-ubuntu-11.04-server-amd64-v1.box"
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
