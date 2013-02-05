@@ -1,7 +1,6 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box = "statsbox"
-  config.vm.box_url = "https://github.com/downloads/divio/vagrant-boxes/vagrant-ubuntu-11.04-server-amd64-v1.box"
+  config.vm.box = "ubuntu12"
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
