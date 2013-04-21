@@ -60,6 +60,7 @@ class statsd {
    exec { "statsd-start": 
      command => "node stats.js /opt/statsd/config.js 2>&1 >> /tmp/statsd.log &",
      cwd => "/opt/statsd",
+     unless => "ps -ef | pgrep -f \"node stats.js /opt/statsd/config.js\"",
      require => [Exec[statsd-install], Package[nodejs], File["/opt/statsd/config.js"]]
    }
 
