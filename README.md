@@ -2,8 +2,6 @@
 
 Provision a virtual machine with vagrant and puppet including statsd and graphite.
 
- * debian package for statsd (github.com/etsy) included 
-
 ## Prerequisites ##
  * Install VirtualBox https://www.virtualbox.org/wiki/Downloads
  * Install Vagrant http://docs.vagrantup.com/v2/installation/index.html
@@ -12,7 +10,7 @@ Provision a virtual machine with vagrant and puppet including statsd and graphit
 ## Usage ##
 
 `vagrant up`
-
+`vagrant provision` 
 
 ## Ports ##
 
