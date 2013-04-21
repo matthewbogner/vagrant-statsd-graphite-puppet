@@ -4,9 +4,10 @@ Provision a virtual machine with vagrant and puppet including statsd and graphit
 
  * debian package for statsd (github.com/etsy) included 
 
-## Base Box ##
-
-This setup expects a box with name `ubuntu12` based on http://files.vagrantup.com/precise64.box
+## Prerequisites ##
+ * Install VirtualBox https://www.virtualbox.org/wiki/Downloads
+ * Install Vagrant http://docs.vagrantup.com/v2/installation/index.html
+ * git clone https://github.com/matthewbogner/vagrant-statsd-graphite-puppet
 
 ## Usage ##
 
