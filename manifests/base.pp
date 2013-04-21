@@ -105,11 +105,6 @@ class carbon {
    group => www-data,
  }
 
- service { carbon :
-    ensure => running,
-    require => File["/etc/init.d/carbon"]
- }
-
  exec { "download-graphite-carbon":
    command => "wget -O $carbon_loc $carbon_url",
    creates => "$carbon_loc"
@@ -127,7 +122,12 @@ class carbon {
    cwd => "$build_dir/carbon-0.9.9",
    require => Exec[unpack-carbon],
    creates => "/opt/graphite/bin/carbon-cache.py",
-  }
+ }
+
+ service { carbon :
+    ensure => running,
+    require => [Exec[install-carbon], Package[python-twisted]]
+ }
 }
 
 class graphite {
