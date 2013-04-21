@@ -9,8 +9,8 @@ Provision a virtual machine with vagrant and puppet including statsd and graphit
 
 ## Usage ##
 
-`vagrant up`
-`vagrant provision` 
+    vagrant up
+    vagrant provision 
 
 ## Ports ##
 
